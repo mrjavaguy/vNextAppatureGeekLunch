@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Building";
+}
+<h1>Creating your own ASP.NEXT app without VS</h1>
+<ul>
+    <li>
+        <div>
+            <h2>Installing</h2>
+            <h3>K Version Manager (KVM)</h3>
+            <p>in an elavated command prompt enter the following:</p>
+            <pre>@@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/master/kvminstall.ps1'))"</pre>
+            <p>close command prompt</p>
+            <h3>K Runtime Environment (KRE)</h3>
+            <p>open an elaveted powershell command prompt and enter the following:</p>
+            <pre>kvm install 1.0.0-alpha3</pre>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h2>Creating Project Files</h2>
+            <h3>project.json</h3>
+            <p>In the directory of your choosing, create a file with your favorite text editor. Add the following json to it.</p>
+            <script src="https://gist.github.com/mrjavaguy/613ca2fb287629830845.js"></script>
+            <p>Available at <a href="https://gist.github.com/mrjavaguy/613ca2fb287629830845">https://gist.github.com/mrjavaguy/613ca2fb287629830845</a><br />save the file as 'project.json'</p>
+            <h3>Startup.cs</h3>
+            <p>In the same directory, create a file. Add the following C# to it.</p>
+            <script src="https://gist.github.com/mrjavaguy/0692412bff6b2ab87c3d.js"></script>
+            <p>Available at <a href="https://gist.github.com/mrjavaguy/0692412bff6b2ab87c3d">https://gist.github.com/mrjavaguy/0692412bff6b2ab87c3d</a>><br />save the file as 'Startup.cs'</p>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h2>Creating the controller</h2>
+            <h3>homecontroller.cs</h3>
+            <p>create a folder below the directory from above called 'controllers'. In the 'controllers' direcotory, create a file called 'HomeController.cs' and add the following C# to it.</p>
+            <script src="https://gist.github.com/mrjavaguy/c99167145a38728d5c52.js"></script>
+            <p>Available at <a href="https://gist.github.com/mrjavaguy/c99167145a38728d5c52">https://gist.github.com/mrjavaguy/c99167145a38728d5c52</a>><br />save the file.</p>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h2>Creating the view</h2>
+            <h3>index.cshtml</h3>
+            <p>create a folder below the folder containing 'project.json' called 'Views', and below the 'Views' folder create a directory called 'Home'. In the 'Home' directory, create a file called Index.cshtml and add the following HTML (razor) to it.</p>
+            <script src="https://gist.github.com/mrjavaguy/5fbfa0f918521ce3cc21.js"></script>
+            <p>Available at <a href="https://gist.github.com/mrjavaguy/5fbfa0f918521ce3cc21">https://gist.github.com/mrjavaguy/5fbfa0f918521ce3cc21</a><br />save the file.</p>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h2>Running the Project</h2>
+            <p>In your powershell command window, in the 'project.json' file, run the following command: <pre>k web</pre></p>
+        </div>
+    </li>
+</ul>
+@section Scripts {
+    <script type="text/javascript">
+        $("#Home").removeClass("active");
+        $("#Building").addClass("active");
+        $("#Cat").removeClass("active");
+    </script>
+}

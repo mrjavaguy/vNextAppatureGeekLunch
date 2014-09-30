@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewBag.Title</title>
+        <link rel="stylesheet" href="~/Styles/foundation.css" />
+        <script src="~/Scripts/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header")
+        <div id="main">
+            @RenderBody()
+        </div>
+        @await Html.PartialAsync("_Footer")
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+<h1>What is new in vNext</h1>
+<ul>
+    <li><strong>Open Source</strong> - runs on Windows, Mac and Linux <sup>*</sup></li>
+    <li><strong>Built in Memory</strong> - does not write files to disk, just need to refresh the browser to recompile</li>
+    <li><strong>No System.Web dependency</strong></li>
+    <li><strong>New Project System</strong> - based on the project.json and NuGet</li>
+    <li><strong>Dependency Injection</strong> - in alpha is limited to constructor injection</li>
+</ul>
+
+<small>* Still in alpha and somethings require extra work current to get running on Linux or the Mac</small>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $("#Home").addClass("active");
+            $("#Building").removeClass("active");
+            $("#Cat").removeClass("active");
+        });
+    </script>
+    }

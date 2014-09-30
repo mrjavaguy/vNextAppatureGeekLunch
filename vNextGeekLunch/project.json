@@ -1,0 +1,21 @@
+﻿{
+    "dependencies": {
+        "Microsoft.AspNet.Server.IIS": "1.0.0-alpha3",
+        "Microsoft.AspNet.Mvc": "6.0.0-alpha3",
+        "Microsoft.AspNet.Hosting": "1.0.0-alpha3",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha3",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-alpha3",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-alpha3",
+    },
+    "frameworks": {
+        "net451": { },
+        "k10": { }
+    },
+    "compilationOptions": {
+        "languageVersion": "experimental"
+    },
+    "commands": {
+        /* Change the port number when you are self hosting this application */
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+    }
+}
