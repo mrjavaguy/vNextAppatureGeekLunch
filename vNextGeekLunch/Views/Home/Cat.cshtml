@@ -2,13 +2,19 @@
     Layout = "/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Cat NOT image";
 }
-
+<div class="row">
+    <div class="small-6 large-centered columns">
+        <a class="th radius" href="#">
+            <img src="~/images/20140802_082549.jpg" />
+        </a>
+    </div>
+</div>
 @section Scripts {
     <script type="text/javascript">
         $(function () {
-            $("#Home").addClass("active");
+            $("#Home").removeClass("active");
             $("#Building").removeClass("active");
-            $("#Cat").removeClass("active");
+            $("#Cat").addClass("active");
         });
     </script>
 }
