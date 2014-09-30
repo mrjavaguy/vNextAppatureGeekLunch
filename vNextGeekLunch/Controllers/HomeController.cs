@@ -25,5 +25,11 @@ namespace vNextGeekLunch
         {
             return View();
         }
+
+
+        public IActionResult Cat()
+        {
+            return View();
+        }
     }
 }
