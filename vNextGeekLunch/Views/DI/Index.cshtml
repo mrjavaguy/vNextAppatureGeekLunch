@@ -1,0 +1,13 @@
+﻿@model vNextGeekLunch.DIModel
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "DI Page";
+}
+
+
+<h1>Using Messaging Service</h1>
+<h2>Valid index into messaging service</h2>
+@await Model.GetMessage("Index")
+
+<h2>Invalid index into messaging service</h2>
+@await Model.GetMessage("Invalid")

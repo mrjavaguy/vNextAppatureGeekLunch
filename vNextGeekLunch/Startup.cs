@@ -13,10 +13,11 @@ namespace vNextGeekLunch
             app.UseServices(services =>
             {
                 services.AddMvc();
-            }
-            );
+                services.AddInstance<IMessagingService>(new MessagingService());
+            });
 
             app.UseMvc();
+
         }
     }
 }
